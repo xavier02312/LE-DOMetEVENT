@@ -1,0 +1,10 @@
+.success {
+    background-color: green;
+    color: white;
+    padding: 12px;
+    width: 100%;
+}
+
+.arrondi {
+    border-radius: 6px;
+}
