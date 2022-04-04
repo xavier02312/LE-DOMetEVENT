@@ -86,4 +86,27 @@ let elements = document.querySelectorAll('.container');
 elements.forEach(element => {
     element.style.backgroundColor = "yellow";
 })
+/**
+ * Events
+ * Ecouteurs d'évenement
+ */
+//Selection d'élément HTML voulu
+const button = document.querySelector("button");
 
+// On applique un écouteur d'évènement sur le bouton
+//Nous allons "écouter" si un CLIC est effectué sur ce bouton
+button.addEventListener("click", () => {
+    //console.log("Tu viens de cliquer sur le bouton !");
+
+    let container = document.querySelector(".container:nth-child(2)");
+    //console.log(container);
+    //container.innerText = "Je suis le nouveau text";  //  enlève le text mais disparait le boutton//
+
+    //Création d' un nouvel élément HTML <p></p>
+    let paragrph = document.createElement("p");
+    paragrph.innerText = "Je suis le paragraphe";
+    paragrph.classList.add("text");                         //rajoute du CSS direct //
+
+    //Ajoute le nouvel élément en tant qu'enfant
+    container.appendChild(paragrph);
+});
